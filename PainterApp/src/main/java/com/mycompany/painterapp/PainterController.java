@@ -83,12 +83,12 @@ public class PainterController {
 
     @FXML
     void colorRadioButtonSelected(ActionEvent event) {
-
+        brushColor = (Paint) colorToggleGroup.getSelectedToggle().getUserData();
     }
 
     @FXML
     void drawingAreaMouseDragged(MouseEvent event) {
-         Circle circle = new Circle(
+        Circle circle = new Circle(
                 event.getX(),
                 event.getY(),
                 radius.getRadius(),
