@@ -1,3 +1,5 @@
+package com.mycompany.painterapp;
+
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
@@ -6,7 +8,6 @@ import javafx.scene.control.ToggleGroup;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.Pane;
 import javafx.scene.paint.Color;
-import javafx.scene.paint.Paint;
 
 public class PainterController {
 
@@ -46,61 +47,50 @@ public class PainterController {
     @FXML
     private Button undoButton;
     
-    private PenSize radius = PenSize.MEDIUM;
-    private Paint brushColor = Color.BLACK;
-    
+    private Color brushColor = Color.BLACK;
+    private PenSize brushSize = PenSize.MEDIUM;
+
+    private enum PenSize {
+        SMALL(2),
+        MEDIUM(5),
+        LARGE(10);
+
+        private final int radius;
+
+        PenSize(int radius) {this.radius = radius;}
+        
+        public int getRadius() {return radius;} 
+    };
+
+    @FXML
     public void initialize() {
         blackRadioButton.setUserData(Color.BLACK);
         redRadioButton.setUserData(Color.RED);
         greenRadioButton.setUserData(Color.GREEN);
         blueRadioButton.setUserData(Color.BLUE);
+
         smallRadioButton.setUserData(PenSize.SMALL);
         mediumRadioButton.setUserData(PenSize.MEDIUM);
         largeRadioButton.setUserData(PenSize.LARGE);
-    }
-
-    @FXML
-    void blackRadioButtonSelected(ActionEvent event) {
-            
-    }
-
-    @FXML
-    void blueRadioButtonSelected(ActionEvent event) {
-            
-    }
-
+    }    
+        
     @FXML
     void clearButtonPressed(ActionEvent event) {
 
     }
 
     @FXML
+    void colorRadioButtonSelected(ActionEvent event) {
+
+    }
+
+    @FXML
     void drawingAreaMouseDragged(MouseEvent event) {
-        
-    }
-
-    @FXML
-    void greenRadioButtonSelected(ActionEvent event) {
 
     }
 
     @FXML
-    void largeRadioButtonSelected(ActionEvent event) {
-
-    }
-
-    @FXML
-    void mediumRadioButtonSelected(ActionEvent event) {
-
-    }
-
-    @FXML
-    void redRadioButtonSelected(ActionEvent event) {
-
-    }
-
-    @FXML
-    void smallRadioButtonSelected(ActionEvent event) {
+    void sizeRadioButtonSelected(ActionEvent event) {
 
     }
 
@@ -108,16 +98,4 @@ public class PainterController {
     void undoButtonPressed(ActionEvent event) {
 
     }
-    
-     private enum PenSize {
-        SMALL(2),
-        MEDIUM(4),
-        LARGE(6);
-        
-        private final int radius;
-        
-        PenSize(int radius) {this.radius = radius;}
-        
-        public int getRadius() {return radius;}
-    };
 }
