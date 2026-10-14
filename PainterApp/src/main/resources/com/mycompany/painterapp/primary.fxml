@@ -3,6 +3,7 @@
 <?import javafx.geometry.Insets?>
 <?import javafx.scene.control.RadioButton?>
 <?import javafx.scene.control.TitledPane?>
+<?import javafx.scene.control.ToggleGroup?>
 <?import javafx.scene.layout.BorderPane?>
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.layout.VBox?>
@@ -21,19 +22,25 @@
                <content>
                   <VBox spacing="8.0">
                      <children>
-                        <RadioButton fx:id="blackRadioButton" mnemonicParsing="false" selected="true" text="Black" />
-                        <RadioButton fx:id="redRadioButton" mnemonicParsing="false" text="Red" />
-                        <RadioButton fx:id="greenRadioButton" mnemonicParsing="false" text="Green" />
-                        <RadioButton fx:id="blueRadioButton" mnemonicParsing="false" text="Blue" />
+                        <RadioButton fx:id="blackRadioButton" mnemonicParsing="false" selected="true" text="Black">
+                           <toggleGroup>
+                              <ToggleGroup fx:id="colorToggleGroup" />
+                           </toggleGroup></RadioButton>
+                        <RadioButton fx:id="redRadioButton" mnemonicParsing="false" text="Red" toggleGroup="$colorToggleGroup" />
+                        <RadioButton fx:id="greenRadioButton" mnemonicParsing="false" text="Green" toggleGroup="$colorToggleGroup" />
+                        <RadioButton fx:id="blueRadioButton" mnemonicParsing="false" text="Blue" toggleGroup="$colorToggleGroup" />
                      </children></VBox>
                </content></TitledPane>
             <TitledPane prefHeight="200.0" prefWidth="200.0" text="Pen Size">
                <content>
                   <VBox spacing="8.0">
                      <children>
-                        <RadioButton fx:id="smallRadioButton" mnemonicParsing="false" text="Small" />
-                        <RadioButton fx:id="mediumRadioButton" mnemonicParsing="false" selected="true" text="Medium" />
-                        <RadioButton fx:id="largeRadioButton" mnemonicParsing="false" text="Large" />
+                        <RadioButton fx:id="smallRadioButton" mnemonicParsing="false" text="Small">
+                           <toggleGroup>
+                              <ToggleGroup fx:id="sizeToggleGroup" />
+                           </toggleGroup></RadioButton>
+                        <RadioButton fx:id="mediumRadioButton" mnemonicParsing="false" selected="true" text="Medium" toggleGroup="$sizeToggleGroup" />
+                        <RadioButton fx:id="largeRadioButton" mnemonicParsing="false" text="Large" toggleGroup="$sizeToggleGroup" />
                      </children></VBox>
                </content></TitledPane>
          </children>
