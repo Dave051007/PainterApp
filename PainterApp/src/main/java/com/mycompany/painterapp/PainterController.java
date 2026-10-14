@@ -78,7 +78,7 @@ public class PainterController {
         
     @FXML
     void clearButtonPressed(ActionEvent event) {
-
+        drawingAreaPane.getChildren().clear();
     }
 
     @FXML
