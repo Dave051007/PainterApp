@@ -1,0 +1,108 @@
+import javafx.event.ActionEvent;
+import javafx.fxml.FXML;
+import javafx.scene.control.Button;
+import javafx.scene.control.RadioButton;
+import javafx.scene.control.ToggleGroup;
+import javafx.scene.input.MouseEvent;
+import javafx.scene.layout.Pane;
+
+public class PainterController {
+
+    @FXML
+    private RadioButton blackRadioButton;
+
+    @FXML
+    private RadioButton blueRadioButton;
+
+    @FXML
+    private Button clearButton;
+
+    @FXML
+    private ToggleGroup colorToggleGroup;
+
+    @FXML
+    private Pane drawingAreaPane;
+
+    @FXML
+    private RadioButton greenRadioButton;
+
+    @FXML
+    private RadioButton largeRadioButton;
+
+    @FXML
+    private RadioButton mediumRadioButton;
+
+    @FXML
+    private RadioButton redRadioButton;
+
+    @FXML
+    private ToggleGroup sizeToggleGroup;
+
+    @FXML
+    private RadioButton smallRadioButton;
+
+    @FXML
+    private Button undoButton;
+
+    @FXML
+    void blackRadioButtonSelected(ActionEvent event) {
+
+    }
+
+    @FXML
+    void blueRadioButtonSelected(ActionEvent event) {
+
+    }
+
+    @FXML
+    void clearButtonPressed(ActionEvent event) {
+
+    }
+
+    @FXML
+    void drawingAreaMouseDragged(MouseEvent event) {
+
+    }
+
+    @FXML
+    void greenRadioButtonSelected(ActionEvent event) {
+
+    }
+
+    @FXML
+    void largeRadioButtonSelected(ActionEvent event) {
+
+    }
+
+    @FXML
+    void mediumRadioButtonSelected(ActionEvent event) {
+
+    }
+
+    @FXML
+    void redRadioButtonSelected(ActionEvent event) {
+
+    }
+
+    @FXML
+    void smallRadioButtonSelected(ActionEvent event) {
+
+    }
+
+    @FXML
+    void undoButtonPressed(ActionEvent event) {
+
+    }
+    
+     private enum PenSize {
+        SMALL(2),
+        MEDIUM(4),
+        LARGE(6);
+        
+        private final int radius;
+        
+        PenSize(int Radius) {this.radius = radius;}
+        
+        public int getRadius() {return radius;}
+    };
+}
