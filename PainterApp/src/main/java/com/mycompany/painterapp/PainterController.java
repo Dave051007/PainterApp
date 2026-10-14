@@ -100,7 +100,7 @@ public class PainterController {
 
     @FXML
     void sizeRadioButtonSelected(ActionEvent event) {
-            
+        radius = (PenSize) sizeToggleGroup.getSelectedToggle().getUserData();
     }
 
     @FXML
