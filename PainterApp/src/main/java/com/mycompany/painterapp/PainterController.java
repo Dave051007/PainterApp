@@ -8,6 +8,8 @@ import javafx.scene.control.ToggleGroup;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.Pane;
 import javafx.scene.paint.Color;
+import javafx.scene.paint.Paint;
+import javafx.scene.shape.Circle;
 
 public class PainterController {
 
@@ -47,8 +49,8 @@ public class PainterController {
     @FXML
     private Button undoButton;
     
-    private Color brushColor = Color.BLACK;
-    private PenSize brushSize = PenSize.MEDIUM;
+    private Paint brushColor = Color.BLACK;
+    private PenSize radius = PenSize.MEDIUM;
 
     private enum PenSize {
         SMALL(2),
@@ -86,12 +88,19 @@ public class PainterController {
 
     @FXML
     void drawingAreaMouseDragged(MouseEvent event) {
+         Circle circle = new Circle(
+                event.getX(),
+                event.getY(),
+                radius.getRadius(),
+                brushColor
+        );
 
+        drawingAreaPane.getChildren().add(circle);
     }
 
     @FXML
     void sizeRadioButtonSelected(ActionEvent event) {
-
+            
     }
 
     @FXML
