@@ -48,15 +48,25 @@ public class PainterController {
     
     private PenSize radius = PenSize.MEDIUM;
     private Paint brushColor = Color.BLACK;
+    
+    public void initialize() {
+        blackRadioButton.setUserData(Color.BLACK);
+        redRadioButton.setUserData(Color.RED);
+        greenRadioButton.setUserData(Color.GREEN);
+        blueRadioButton.setUserData(Color.BLUE);
+        smallRadioButton.setUserData(PenSize.SMALL);
+        mediumRadioButton.setUserData(PenSize.MEDIUM);
+        largeRadioButton.setUserData(PenSize.LARGE);
+    }
 
     @FXML
     void blackRadioButtonSelected(ActionEvent event) {
-
+            
     }
 
     @FXML
     void blueRadioButtonSelected(ActionEvent event) {
-
+            
     }
 
     @FXML
@@ -66,7 +76,7 @@ public class PainterController {
 
     @FXML
     void drawingAreaMouseDragged(MouseEvent event) {
-
+        
     }
 
     @FXML
