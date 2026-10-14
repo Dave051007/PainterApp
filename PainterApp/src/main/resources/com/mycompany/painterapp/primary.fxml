@@ -16,8 +16,14 @@
             <Insets right="8.0" />
          </BorderPane.margin>
          <children>
-            <TitledPane prefHeight="200.0" prefWidth="200.0" text="Drawing Color" />
-            <TitledPane prefHeight="200.0" prefWidth="200.0" text="Pen Size" />
+            <TitledPane prefHeight="200.0" prefWidth="200.0" text="Drawing Color">
+               <content>
+                  <VBox spacing="8.0" />
+               </content></TitledPane>
+            <TitledPane prefHeight="200.0" prefWidth="200.0" text="Pen Size">
+               <content>
+                  <VBox spacing="8.0" />
+               </content></TitledPane>
          </children>
       </VBox>
    </left>
